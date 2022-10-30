@@ -7,18 +7,22 @@ export type Doc = {
 
 type UscDoc = {
  meta: Meta;
- main: any;
+ main: Main;
 }
 
 type Meta = {
- "dc:title": any;
- "dc:type": any;
- docNumber: any;
- docPublicationName: any;
- property: any;
- "dc:publisher": any;
- "dcterms:created": any;
- "dc:creator": any;
+ "dc:title": string[];
+ "dc:type": string[];
+ docNumber: string[];
+ docPublicationName: string[];
+ property: string[];
+ "dc:publisher": string[];
+ "dcterms:created": string[];
+ "dc:creator": string[];
+}
+
+type Main = {
+ title: any;
 }
 
 export default Doc;
