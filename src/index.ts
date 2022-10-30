@@ -13,7 +13,9 @@ const p: XMLParser = new XMLParser();
 const xml: string = fs.readFileSync('./us-code-stash/data/zip/usc09.xml', 'utf8');
 // Parse XML
 const json: Doc = p.parse(xml) as Doc;
-console.log(json['?xml']);
 console.log(Object.keys(json));
+console.log(Object.keys(json.uscDoc));
+console.log(Object.keys(json.uscDoc.meta));
+console.log(Object.keys(json.uscDoc.meta['dc:title']));
 
 console.log('bye :(');

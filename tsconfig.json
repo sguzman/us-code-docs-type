@@ -1,10 +1,5 @@
 {
   "compilerOptions": {
-    "plugins": [
-      {
-        "transform": "typescript-is/lib/transform-inline/transformer"
-      }
-    ],
     "lib": [
       "ESNext"
     ],
