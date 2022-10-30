@@ -1,6 +1,7 @@
 // Path: src/index.ts
 // Import fast-xml-parser
 import { XMLParser } from 'fast-xml-parser';
+import { is } from 'typescript-is';
 import * as fs from 'fs';
 import { Doc } from './types';
 
@@ -12,6 +13,7 @@ const p: XMLParser = new XMLParser();
 const xml: string = fs.readFileSync('./us-code-stash/data/zip/usc09.xml', 'utf8');
 // Parse XML
 const json: Doc = p.parse(xml) as Doc;
+console.log(json['?xml']);
 console.log(Object.keys(json));
 
 console.log('bye :(');
