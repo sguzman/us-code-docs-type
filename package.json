@@ -1,0 +1,8 @@
+{
+  "name": "us-code-docs-type",
+  "version": "0.0.59",
+  "module": "src/index.js",
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}
