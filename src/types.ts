@@ -11,18 +11,36 @@ type UscDoc = {
 }
 
 type Meta = {
- "dc:title": string[];
- "dc:type": string[];
- docNumber: string[];
- docPublicationName: string[];
- property: string[];
- "dc:publisher": string[];
- "dcterms:created": string[];
- "dc:creator": string[];
+ "dc:title": string;
+ "dc:type": string;
+ docNumber: number;
+ docPublicationName: string;
+ property: string;
+ "dc:publisher": string;
+ "dcterms:created": string;
+ "dc:creator": string;
 }
 
 type Main = {
  title: any;
+}
+
+type Title = {
+ "num": string;
+ "heading": string;
+ "note": Note[];
+ "toc": any;
+ "notes": any;
+ "chapter": any;
+}
+
+type Note = {
+ p: PElement;
+}
+
+type PElement = {
+ ref: string[];
+ "#text": string;
 }
 
 export default Doc;
